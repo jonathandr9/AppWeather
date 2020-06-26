@@ -1,6 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, Icon, Text} from 'react-native';
+import {View, StyleSheet, Icon, Text, TextInput} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
+
+import {Dropdown} from './dropdown';
 
 export default function Home(){
     return (
@@ -13,6 +15,12 @@ export default function Home(){
                 </View>
 
                 <View style={styles.footer}>
+
+                    {/* <TextInput style={styles.input} placeholder="UF"></TextInput>
+                    <TextInput style={styles.input} placeholder="Cidade"></TextInput> */}
+
+                    <Dropdown style={styles.input} />
+
                     <RectButton style={styles.button} onPress={() => {}}>
                             <View style={styles.buttonIcon}>
                                 <Text>></Text>
