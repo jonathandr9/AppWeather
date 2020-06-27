@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios' ;
 import {View, StyleSheet, Icon, Text, TextInput} from 'react-native';
-import {RectButton} from 'react-native-gesture-handler';
-
 import {Dropdown} from './dropdown';
 
 export default function Home(){
-    return (
+  
+  
+  
+  return (
         
            <View style={styles.container}>
 
@@ -14,21 +16,10 @@ export default function Home(){
                         <Text style={styles.description}>Seu app para consulta de dados climáticos</Text>
                 </View>
 
-                <View style={styles.footer}>
+                <View style={styles.footer}>                  
 
-                    {/* <TextInput style={styles.input} placeholder="UF"></TextInput>
-                    <TextInput style={styles.input} placeholder="Cidade"></TextInput> */}
-
-                    <Dropdown style={styles.input} />
-
-                    <RectButton style={styles.button} onPress={() => {}}>
-                            <View style={styles.buttonIcon}>
-                                <Text>></Text>
-                            </View>
-                            <Text style={styles.buttonText}>
-                                Buscar
-                            </Text>
-                    </RectButton>
+                    <Dropdown />
+                                       
                 </View>     
 
            </View>
@@ -68,39 +59,6 @@ const styles = StyleSheet.create({
     
       select: {},
     
-      input: {
-        height: 60,
-        backgroundColor: '#FFF',
-        borderRadius: 10,
-        marginBottom: 8,
-        paddingHorizontal: 24,
-        fontSize: 16,
-      },
+     
     
-      button: {
-        backgroundColor: '#34CB79',
-        height: 60,
-        flexDirection: 'row',
-        borderRadius: 10,
-        overflow: 'hidden',
-        alignItems: 'center',
-        marginTop: 8,
-      },
-    
-      buttonIcon: {
-        height: 60,
-        width: 60,
-        // backgroundColor: 'rgba(0, 0, 0, 0.1)',
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-    
-      buttonText: {
-        flex: 1,
-        justifyContent: 'center',
-        textAlign: 'center',
-        color: '#FFF',
-        fontFamily: 'Roboto_500Medium',
-        fontSize: 16,
-      }
 });
