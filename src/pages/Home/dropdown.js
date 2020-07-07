@@ -22,7 +22,7 @@ export const Dropdown = () => {
 
         axios.get('http://api.openweathermap.org/data/2.5/weather',{
                 params:{
-                    appId: '9de7b16cddcbe577071866f089e9aee6',
+                    appId: '',
                     lang: 'pt',
                     units: 'metric',
                     q: city
